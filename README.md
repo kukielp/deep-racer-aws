@@ -1,5 +1,18 @@
-# Introduction to AWS Deep Racer - LAB
+# Introduction to AWS Deep Racer - AWS Programming and Tools Meetup
 
+## Presenters
+Paul Kukiel - https://au.linkedin.com/in/paulkukiel
+Cloud Architect at National Australia Bank
+
+Chris Rhodes - https://au.linkedin.com/in/rhodeschristopher
+Cloud Engineer at National Australia Bank
+
+## Refence Links
+Run Deepr Racer Locally - https://github.com/crr0004/deepracer
+
+Udemy Deep Racer Scholarship - https://github.com/crr0004/deepracer
+
+AWS Deep rcaer Training ( 90 mins ) - https://www.aws.training/Details/eLearning?&search=DeepRacer&tab=view_all
 
 ## Overview
 The aim of the session today is to provide a gentle introduction to machine learning.  We have heard from Chris Rhodes ( referce Chris ) how the basic mechanics of reinforment learning works.  Now we are goign to put that into practice and setup our very own simulation.
@@ -191,6 +204,8 @@ Click on "Gazebo" icon
 ![](img/gaz.png)
 
 for a more "birds eye view" of the car on the track.  Explor the outputs.
+
+![](img/bird.png)
 
 If you put debug messages in your reward fucntion you can view them in your logs.  Scroll to the bottom of the page and click "Logs"
 
