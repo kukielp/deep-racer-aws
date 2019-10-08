@@ -94,7 +94,7 @@ Speed granularity: 1
 
 It wont be fast but it should train quickly.
 
-[](img/action.png)
+![](img/action.png)
 
 
 ## Step 3: Reward Function
@@ -138,18 +138,14 @@ The number of recent vehicle experiences sampled at random from an experience bu
 
 The batch is a subset of an experience buffer that is composed of images captured by the camera mounted on the AWS DeepRacer vehicle and actions taken by the vehicle.
 
-
 ## Number of epochs
 The number of passes through the training data to update the neural network weights during gradient descent. The training data corresponds to random samples from the experience buffer. Use a larger number of epochs to promote more stable updates, but expect a slower training. When the batch size is small, you can use a smaller number of epochs.
-
 
 ## Learning rate
 During each update, a portion of the new weight can be from the gradient-descent (or ascent) contribution and the rest from the existing weight value. The learning rate controls how much a gradient-descent (or ascent) update contributes to the network weights. Use a higher learning rate to include more gradient-descent contributions for faster training, but be aware of the possibility that the expected reward may not converge if the learning rate is too large.
 
-
 ## Entropy
 The degree of uncertainty used to determine when to add randomness to the policy distribution. The added uncertainty helps the AWS DeepRacer vehicle explore the action space more broadly. A larger entropy value encourages the vehicle to explore the action space more thoroughly.
-
 
 ## Discount factor
 The discount factor determines how much of future rewards are discounted in calculating the reward at a given state as the averaged reward over all the future states. The discount factor of 0 means the current state is independent of future steps, whereas the discount factor 1 means that contributions from all of the future steps are included. With the discount factor of 0.9, the expected reward at a given step includes rewards from an order of 10 future steps. With the discount factor of 0.999, the expected reward includes rewards from an order of 1000 future steps.
@@ -158,24 +154,26 @@ The discount factor determines how much of future rewards are discounted in calc
 ## loss type
 The type of the objective function to update the network weights. A good training algorithm should make incremental changes to the vehicle’s strategy so that it gradually transitions from taking random actions to taking strategic actions to increase reward. But if it makes too big a change then the training becomes unstable and the agent ends up not learning. The Huber and Mean squared error loss types behave similarly for small updates. But as the updates become larger, the Huber loss takes smaller increments compared to the Mean squared error loss. When you have convergence problems, use the Huber loss type. When convergence is good and you want to train faster, use the Mean squared error loss type.
 
-
 ## Number of experience episodes between each policy-updating iteration
+
 The size of the experience buffer used to draw training data from for learning policy network weights. An episode is a period in which the vehicle starts from a given starting point and ends up completing the track or going off the track. Different episodes can have different lengths. For simple reinforcement-learning problems, a small experience buffer may be sufficient and learning will be fast. For more complex problems which have more local maxima, a larger experience buffer is necessary to provide more uncorrelated data points. In this case, training will be slower but more stable. The recommended values are 10, 20 and 40.
 
+## Training
 For today it wont make much differnce in the short time what we change here.  Many members of the community have tips and tricks.  The mode valuable I have found is to slow down the leanrning rate.  If you do though training will be slower.
 
-[](img/action.png)
+![Action Space](img/action.png)
 
 Once you have choosen values you can specify a stop time.  This will dend on the time you want to head home.  You can train more then one model at a time so perhaps set this to 45 mins.
 
 Click "Start Training"
-[](img/stopstart.png)
+
+![](img/stopstart.png)
 
 Youll notice 
 
 A small alert.  This is starting the training.  It can take 4-10 mins to start.  It's best to wait on the page untill the training starts.
 
-[](img/training.png)
+![](img/training.png)
 
 From here you will now have a video of the car as it attempts to drive around the track.  This is intersting to watch as the car learns to drive around the track.
 
@@ -187,21 +185,21 @@ https://console.aws.amazon.com/robomaker/home?region=us-east-1#simulationJobs
 
 You will see the Simulation job, click on the simulation and you have a view of robo maker where you can also see the video of the car in the virtual world.
 
-[](img/training.png)
+![](img/training.png)
 
 Click on "Gazebo" icon 
-[](img/gaz.png)
+![](img/gaz.png)
 
 for a more "birds eye view" of the car on the track.  Explor the outputs.
 
 If you put debug messages in your reward fucntion you can view them in your logs.  Scroll to the bottom of the page and click "Logs"
 
-[](img/logs.png)
+![](img/logs.png)
 
 This will display the logs in clowdwtach.  You'll also be able to see the rewards and any other issues that arrise.  You will spend alot of time here.
 
 Using the reward basic reward function, the small action space I was able to complete the track ( slowly ) with 45 mins of training.  By the end of the lesson that first model should get aroudn the track.  You can Evaluate a model onces it's completed training.
 
-[](img/complete.png)
+![](img/complete.png)
 
 You are now free to explore!
