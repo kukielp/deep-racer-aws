@@ -29,7 +29,7 @@ At the end of the session you will have:
 - Examined and reviewed the outputs and logs of your simulation
 - Experienced the virtual world as a birds eye view of the AWS virtual track
 - Have built a model that ( hopefully ) learns its way around a simple race track
-- Had a look at the physical Deep Racer Vehicle and track
+- Had a look at the physical Deep Racer Vehicle
 
 ## Step 1: AWS Console
 Logon to the AWS Console.  Ensure you are have selected the correct region: N.Virginia ( us-east-1 ).
