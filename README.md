@@ -8,6 +8,8 @@ Chris Rhodes - https://au.linkedin.com/in/rhodeschristopher
 Cloud Engineer at National Australia Bank
 
 ## Refence Links
+Chris Rhodes Reinforcement overview - https://bit.ly/2IsUxz0
+
 Run Deep Racer Locally - https://github.com/crr0004/deepracer
 
 Udemy Deep Racer Scholarship - https://github.com/crr0004/deepracer
